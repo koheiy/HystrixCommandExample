@@ -9,6 +9,6 @@ public class SampleController {
 
     @GetMapping("/index/{name}")
     public String index(@PathVariable("name") String name) {
-        return new SampleHystrixCommand(name).run().get();
+        return new SampleHystrixCommand(name).execute();
     }
 }
